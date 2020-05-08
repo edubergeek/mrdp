@@ -1,0 +1,27 @@
+## Example docker-compose.yml that will adjust datasets
+## by way of adjusting the sample.conf 
+
+version: '3.2'
+
+services:
+  backend:
+    build:
+      context: './compose/'
+      args:
+       MRDP_VERSION: ${MRDP_VERSION}
+    networks:
+      - frontend
+      - backend
+    ports:
+      - "5000:5000"
+      - "5100:5100"
+    volumes:
+      - ./sample.conf:/opt/MRDP/portal/portal.conf
+      - ./mydatasets.json:/opt/MRDP/portal/data/mydatasets.json
+    container_name: mrdp
+    restart: always
+networks:
+  frontend:
+  backend:
+volumes:
+  data:
