@@ -3,7 +3,7 @@ FROM python:3.8.2-alpine3.11
 
 WORKDIR /opt/MRDP
 
-COPY ./globus-sample-data-portal/ /opt/MRDP/
+COPY ./mrdp/ /opt/MRDP/
 
 RUN apk add gcc musl-dev python3-dev libffi-dev openssl-dev 
 RUN pip3 install -r requirements.txt

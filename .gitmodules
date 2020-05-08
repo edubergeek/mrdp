@@ -1,0 +1,3 @@
+[submodule "compose/mrdp"]
+	path = compose/mrdp
+	url = https://github.com/globus/globus-sample-data-portal
