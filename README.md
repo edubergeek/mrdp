@@ -5,14 +5,15 @@ Chard K, Dart E, Foster I, Shifflett D, Tuecke S, Williams J. 2018. The Modern R
 
 https://github.com/globus/globus-sample-data-portal
 
-The above repo is included in this one as submodule. 
+The above repo is included in this one as a submodule. 
 
 If you clone this repo normally, you must do the following to get MRDP in the right place:
 
+git clone https://github.com/edubergeek/mrdp.git
 git submodule init
 git submodule update
 
-You can add the --recurse-submodules option when cloning this repo and the submodule will be cloned automatically.
+You can avoid the extra steps if you add the --recurse-submodules option when cloning this repo.
 
 e.g. 
 
